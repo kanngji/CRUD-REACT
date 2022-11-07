@@ -27,9 +27,11 @@ function CreawtePost() {
     console.log(post);
 
     axios
-      .post("http://localhost:4000/create", post)
+      .post("http://localhost:4000/board/post", post)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
+
+    navigate("posts");
   };
 
   return (

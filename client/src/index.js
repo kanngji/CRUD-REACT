@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import CreatePost from "./CreatePost";
+import Posts from "./Post";
 import reportWebVitals from "./reportWebVitals";
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +16,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}></Route>
       <Route path="/create" element={<CreatePost />}></Route>
+      <Route path="/create/posts" element={<Posts />}></Route>
     </Routes>
   </BrowserRouter>
 );
