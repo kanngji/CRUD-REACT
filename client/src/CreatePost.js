@@ -24,8 +24,12 @@ function CreawtePost() {
 
   const handleClick = (event) => {
     event.preventDefault();
+    console.log(post);
 
-    axios.post("/create");
+    axios
+      .post("http://localhost:4000/create", post)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -48,7 +52,16 @@ function CreawtePost() {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button onClick={handleClick}>CREATE POST</Button>
+        <Button
+          style={{
+            width: "100%",
+            marginBottom: "1rem",
+            variant: "outline-success",
+          }}
+          onClick={handleClick}
+        >
+          CREATE POST
+        </Button>
       </Form>
       {/* 뒤로 가기 기능 */}
       <Button
